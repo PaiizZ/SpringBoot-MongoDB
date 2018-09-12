@@ -1,9 +1,7 @@
-package com.example.product.model;
+package com.example.product.models;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -17,13 +15,4 @@ public class Product {
     private ObjectId _id;
     private String name;
     private String price;
-
-    // Constructors
-    public Product() {}
-
-    public Product(ObjectId _id, String name, String price) {
-        this._id = _id;
-        this.name = name;
-        this.price = price;
-    }
 }
