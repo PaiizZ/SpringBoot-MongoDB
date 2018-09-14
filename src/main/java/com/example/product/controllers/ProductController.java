@@ -1,13 +1,11 @@
 package com.example.product.controllers;
 
 import com.example.product.models.Product;
-import com.example.product.repositories.ProductRepository;
 import com.example.product.services.ProductService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
