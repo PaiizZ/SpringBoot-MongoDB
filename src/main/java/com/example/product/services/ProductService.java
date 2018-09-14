@@ -31,5 +31,9 @@ public class ProductService {
         repository.delete(repository.findBy_id(id));
     }
 
-
+    public Product updateProduct(ObjectId id, Product product) {
+        product.set_id(id);
+        repository.save(product);
+        return product;
+    }
 }
