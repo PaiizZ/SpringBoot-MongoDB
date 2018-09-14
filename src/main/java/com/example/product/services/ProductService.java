@@ -26,4 +26,10 @@ public class ProductService {
         repository.save(product);
         return product;
     }
+
+    public void deleteProduct(ObjectId id) {
+        repository.delete(repository.findBy_id(id));
+    }
+
+
 }

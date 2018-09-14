@@ -30,4 +30,8 @@ public class ProductController {
     public Product createProduct(@RequestBody Product product) {
         return productService.createProduct(product);
     }
+
+    @DeleteMapping("/product/{id}")
+    public void deleteProduct(@PathVariable("id") ObjectId id) { productService.deleteProduct(id); }
+
 }
