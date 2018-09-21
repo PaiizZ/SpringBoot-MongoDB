@@ -6,6 +6,11 @@ import lombok.experimental.Accessors;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
+import javax.validation.constraints.NotNull;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
 @Accessors(chain = true)
@@ -13,6 +18,10 @@ import org.springframework.data.annotation.Id;
 public class Product {
     @Id
     private ObjectId _id;
-    private String name;
-    private String price;
+    @NotNull private String code;
+    @NotNull private String name;
+    private String description;
+    private Array product_tags;
+    private Array product_photos;
+    @NotNull private List<Item> items;
 }
