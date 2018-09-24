@@ -4,6 +4,8 @@ import com.example.product.models.product.Product;
 import com.example.product.services.ProductService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -16,8 +18,8 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/products")
-    public List<Product> getProducts() {
-        return productService.getAllProduct();
+    public ResponseEntity<List<Product>> getProducts() {
+        return new ResponseEntity<>(productService.getAllProduct(), HttpStatus.OK);
     }
 
     @GetMapping("/product")
