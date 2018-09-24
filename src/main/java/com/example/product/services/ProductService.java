@@ -21,6 +21,8 @@ public class ProductService {
         return repository.findBy_id(id);
     }
 
+    public Product getProductByName(String name) { return repository.findByName(name); }
+
     public Product createProduct(Product product) {
         product.set_id(ObjectId.get());
         repository.save(product);
