@@ -1,3 +1,3 @@
 # SpringBoot with MongoDB Atlas
 
-#### Start projrct by https://start.spring.io/
+#### Start project by https://start.spring.io/
