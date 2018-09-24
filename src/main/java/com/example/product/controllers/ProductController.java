@@ -1,6 +1,6 @@
 package com.example.product.controllers;
 
-import com.example.product.models.Product;
+import com.example.product.models.product.Product;
 import com.example.product.services.ProductService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;

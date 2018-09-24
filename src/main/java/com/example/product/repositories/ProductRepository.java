@@ -1,6 +1,6 @@
 package com.example.product.repositories;
 
-import com.example.product.models.Product;
+import com.example.product.models.product.Product;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
