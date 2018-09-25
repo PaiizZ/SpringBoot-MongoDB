@@ -1,6 +1,6 @@
 package com.example.product.services;
 
-import com.example.product.models.product.Product;
+import com.example.product.models.Product;
 import com.example.product.repositories.ProductRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
