@@ -8,15 +8,13 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler extends Throwable {
 
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Error> notFoundExceptionHandler(NotFoundException exception){
         Error errorModel = new Error();
-//        errorModel.setCode(exception.getErrorCode());
-//        errorModel.setDescription(exception.getErrorDescription());
-          errorModel.setCode("Not Found");
-          errorModel.setDescription("หาใหม่");
+        errorModel.setCode(exception.getErrorCode());
+        errorModel.setDescription(exception.getErrorDescription());
         return new ResponseEntity<>(errorModel, HttpStatus.NOT_FOUND);
     }
 
