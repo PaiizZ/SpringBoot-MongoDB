@@ -1,7 +1,6 @@
 package com.example.product.clients;
 
-import com.example.product.models.Quote;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.product.models.quote.Quote;
 import org.springframework.web.client.RestTemplate;
 
 

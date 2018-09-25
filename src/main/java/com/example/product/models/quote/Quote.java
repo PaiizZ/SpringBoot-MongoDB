@@ -1,4 +1,4 @@
-package com.example.product.models;
+package com.example.product.models.quote;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
