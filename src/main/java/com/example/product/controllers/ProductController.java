@@ -23,26 +23,26 @@ public class ProductController {
     }
 
     @GetMapping("/product")
-    public Product getProductByName(@RequestParam("name") String name) {
-        return productService.getProductByName(name);
+    public ResponseEntity<Product> getProductByName(@RequestParam("name") String name) {
+        return new ResponseEntity<>(productService.getProductByName(name), HttpStatus.OK);
     }
 
     @GetMapping("/product/{id}")
-    public Product getProductById(@PathVariable("id") ObjectId id) {
-        return productService.getProduct(id);
+    public ResponseEntity<Product> getProductById(@PathVariable("id") ObjectId id) {
+        return new ResponseEntity<>(productService.getProduct(id), HttpStatus.OK);
     }
 
     @PostMapping("/product")
-    public Product createProduct(@Valid @RequestBody Product product) {
-        return productService.createProduct(product);
+    public ResponseEntity<Product> createProduct(@Valid @RequestBody Product product) {
+        return new ResponseEntity<>(productService.createProduct(product), HttpStatus.OK);
     }
 
     @DeleteMapping("/product/{id}")
     public void deleteProduct(@PathVariable("id") ObjectId id) { productService.deleteProduct(id); }
 
     @PutMapping("/product/{id}")
-    public Product updateProduct(@PathVariable("id") ObjectId id, @RequestBody Product product) {
-        return productService.updateProduct(id, product);
+    public ResponseEntity<Product> updateProduct(@PathVariable("id") ObjectId id, @RequestBody Product product) {
+        return new ResponseEntity<>(productService.updateProduct(id, product), HttpStatus.OK);
     }
 
 }
