@@ -23,9 +23,8 @@ public class ProductService {
 
 
     public Product getProduct(ObjectId id) {
-        log.info("{}", repository.findBy_id(id));
         Product product = repository.findBy_id(id);
-        if(product == null) throw new NotFoundException("404", "ไม่เจอนะจ๊ะ");
+        if(product == null) throw new NotFoundException("404", "Not found a product");
       return repository.findBy_id(id);
     }
 
