@@ -16,10 +16,14 @@ import java.util.List;
 public class Product {
     @Id
     private ObjectId _id;
-    @NotNull private String code;
-    @NotNull private String name;
+    @NotNull(
+            message = "Code is required"
+    ) private String code;
+    @NotNull (
+            message = "Name is required"
+    ) private String name;
     private String description;
     private String[] product_tags;
     private String[] product_photos;
-    @NotNull private List<Item> items;
+    private List<Item> items;
 }
